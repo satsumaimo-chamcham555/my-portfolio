@@ -80,53 +80,49 @@ const WORKS = [
 export default function Home() {
   return (
     <>
-      <section id="hero" className="relative overflow-visible px-4 py-10 md:px-8 lg:py-14">
-        <div className="glass-panel collage-tilt-hero mx-auto max-w-4xl border-t-4 border-chartreuse px-8 py-14 shadow-lg shadow-chartreuse/10 md:px-12 md:py-16">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-skyaccent drop-shadow-sm">
-            Portfolio
-          </p>
-          <h1 className="mb-8 bg-gradient-to-r from-hotpink via-chartreuse to-skyaccent bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
-            Satsuki Dohi
-          </h1>
-          <div className="accent-divider-sky mx-auto mb-8" />
-          <div className="mx-auto max-w-xl space-y-2 text-lg font-medium text-neutral-800 sm:text-xl">
-            <p className="transition-colors hover:text-hotpink">津田塾大学</p>
-            <p className="transition-colors hover:text-hotpink">学芸学部</p>
-            <p className="transition-colors hover:text-hotpink">情報科学科</p>
+     <section id="hero" className="relative overflow-visible px-4 py-10 md:px-8 lg:py-14">
+        {/* max-w-4xl を 5xl に広げ、md:flex で横並びを許可しました */}
+        <div className="glass-panel collage-tilt-hero mx-auto max-w-5xl border-t-4 border-chartreuse px-8 py-10 shadow-lg shadow-chartreuse/10 md:flex md:items-center md:justify-between md:gap-10 md:px-12 md:py-16">
+          
+          {/* --- 左側：テキストエリア --- */}
+          <div className="flex-1 text-center md:text-left">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-skyaccent drop-shadow-sm">
+              Portfolio
+            </p>
+            <h1 className="mb-6 bg-gradient-to-r from-hotpink via-chartreuse to-skyaccent bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
+              Satsuki Dohi
+            </h1>
+            <div className="accent-divider-sky mb-8 md:mx-0 mx-auto" />
+            <div className="space-y-2 text-lg font-medium text-neutral-800 sm:text-xl">
+              <p className="transition-colors hover:text-hotpink">津田塾大学</p>
+              <p className="transition-colors hover:text-hotpink">学芸学部</p>
+              <p className="transition-colors hover:text-hotpink">情報科学科</p>
+            </div>
           </div>
-        </div>
-      </section>
 
-      <section
-        id="about-me"
-        aria-labelledby="about-me-heading"
-        className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12"
-      >
-        <div className="relative mx-auto max-w-6xl">
-          <div className="glass-panel collage-tilt-about relative overflow-visible px-8 py-12 md:min-h-[min(520px,70vh)] md:px-12 md:py-14 md:pr-[min(380px,38vw)]">
-            <div className="relative z-10 mx-auto max-w-2xl text-center md:mx-0 md:text-left">
-              <h2
-                id="about-me-heading"
-                className="mb-3 text-3xl font-bold tracking-tight text-hotpink"
-              >
-                About Me
-              </h2>
-              <div className="accent-divider-sky mx-auto mb-10 md:mx-0" />
-              <div className="space-y-8 text-left text-[15px] leading-relaxed text-neutral-800 sm:text-base">
-                {ABOUT_BLOCKS.map((block, i) => (
-                  <div key={i} className="space-y-3">
-                    {block.lines.map((line, j) => (
-                      <p key={j}>{line}</p>
-                    ))}
-                  </div>
-                ))}
+          {/* --- 右側：画像エリア --- */}
+          <div className="mt-10 flex flex-1 justify-center md:mt-0">
+            <div className="relative group">
+              {/* 背景のぼんやりした光 */}
+              <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-hotpink/20 to-skyaccent/20 blur-xl group-hover:blur-2xl transition-all"></div>
+              
+              {/* メインの丸い写真 */}
+              <img 
+                src="/kawaiigirl.JPG" 
+                alt="Satsuki Dohi" 
+                className="relative z-10 h-64 w-64 rounded-full border-4 border-white object-cover shadow-2xl ring-4 ring-hotpink/30"
+              />
+              
+              {/* 「KAWAII!」の小さなステッカー */}
+              <div className="absolute -bottom-2 -right-2 z-20 rounded-lg bg-chartreuse px-3 py-1 text-[10px] font-bold text-white shadow-md rotate-12">
+                KAWAII!
               </div>
             </div>
-            <CollagePhotoA />
           </div>
+
         </div>
       </section>
-
+      
       <section
         id="skills"
         aria-labelledby="skills-heading"
