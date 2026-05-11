@@ -4,7 +4,6 @@ import {
   UnityIcon,
   VSCodeIcon,
 } from "@/components/SkillIcons";
-// ★ C（Works用）を復活！
 import {
   CollagePhotoA,
   CollagePhotoC,
@@ -99,81 +98,41 @@ export default function Home() {
           </div>
           <div className="mt-10 flex flex-1 justify-center md:mt-0">
             <div className="relative group">
+              {/* === 写真1枚だけ！背景のぼんやりした光 === */}
               <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-hotpink/20 to-skyaccent/20 blur-xl group-hover:blur-2xl transition-all"></div>
-              <img 
-                src="/kawaiigirl.JPG" 
-                alt="Satsuki Dohi" 
-                className="relative z-10 h-64 w-64 rounded-full border-4 border-white object-cover shadow-2xl ring-4 ring-hotpink/30"
-              />
-             {/* 背景のぼんやりした光 */}
-             <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-hotpink/20 to-skyaccent/20 blur-xl group-hover:blur-2xl transition-all"></div>
               
-              {/* メインの丸い写真 */}
               <img 
                 src="/kawaiigirl.JPG" 
                 alt="Satsuki Dohi" 
                 className="relative z-10 h-64 w-64 rounded-full border-4 border-white object-cover shadow-2xl ring-4 ring-hotpink/30"
               />
               
-              {/* === 🎀 ここからペタペタシールエリア（超増量！） 🎀 === */}
-              {/* ① キラキラシール (new!) */}
-              <div className="absolute -top-4 -left-4 z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-skyaccent text-xl shadow-lg -rotate-12 border-2 border-white transition-transform hover:scale-125 hover:rotate-0">
-                ✨
-              </div>
-
-              {/* ② ほしシール (new!) */}
-              <div className="absolute top-6 right-[min(10%,2rem)] z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-hotpink text-xl shadow-lg rotate-12 border-2 border-white transition-transform hover:scale-125 hover:rotate-0">
-                ⭐
-              </div>
-
-              {/* ③ くもシール (new!) */}
-              <div className="absolute -left-6 top-1/2 z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-chartreuse text-xl shadow-lg -rotate-[20deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">
-                ☁️
-              </div>
-
-              {/* ④ ハートシール 1 (pink) (new!) */}
-              <div className="absolute bottom-6 -left-6 z-20 flex h-12 w-12 cursor-default items-center justify-center rounded-full bg-hotpink text-xl shadow-lg -rotate-[15deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">
-                💖
-              </div>
-
-              {/* ⑤ ハートシール 2 (blue) (new!) */}
-              <div className="absolute bottom-2 left-6 z-20 flex h-9 w-9 cursor-default items-center justify-center rounded-full bg-skyaccent text-lg shadow-lg rotate-[10deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">
-                💙
-              </div>
-
-              {/* ⑥ ハートシール 3 (green) (new!) */}
-              <div className="absolute top-1/2 -right-8 z-20 flex h-9 w-9 cursor-default items-center justify-center rounded-full bg-chartreuse text-lg shadow-lg -rotate-[10deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">
-                💛
-              </div>
-
-              {/* ⑦ 言葉ステッカー (new!) */}
-              <div className="absolute -top-2 right-12 z-20 cursor-default rounded-full bg-white px-3 py-1 text-[11px] font-black tracking-wider text-skyaccent shadow-lg rotate-[-8deg] border-2 border-skyaccent/20 transition-transform hover:scale-125">
-                LIKE IT!
-              </div>
-
-              {/* ⑧ 元からある KAWAII! ステッカー（場所を少し調整） */}
-              <div className="absolute bottom-0 -right-2 z-20 cursor-default rounded-lg bg-chartreuse px-3 py-1 text-[10px] font-bold text-white shadow-md rotate-12 transition-transform hover:scale-125">
-                KAWAII!
-              </div>
-              {/* ======================================= */}
+              {/* === 🎀 Hero用ペタペタシール 🎀 === */}
+              <div className="absolute -top-4 -left-4 z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-skyaccent text-xl shadow-lg -rotate-12 border-2 border-white transition-transform hover:scale-125 hover:rotate-0">✨</div>
+              <div className="absolute top-6 right-[min(10%,2rem)] z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-hotpink text-xl shadow-lg rotate-12 border-2 border-white transition-transform hover:scale-125 hover:rotate-0">⭐</div>
+              <div className="absolute -left-6 top-1/2 z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-chartreuse text-xl shadow-lg -rotate-[20deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">☁️</div>
+              <div className="absolute bottom-6 -left-6 z-20 flex h-12 w-12 cursor-default items-center justify-center rounded-full bg-hotpink text-xl shadow-lg -rotate-[15deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">💖</div>
+              <div className="absolute bottom-2 left-6 z-20 flex h-9 w-9 cursor-default items-center justify-center rounded-full bg-skyaccent text-lg shadow-lg rotate-[10deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">💙</div>
+              <div className="absolute top-1/2 -right-8 z-20 flex h-9 w-9 cursor-default items-center justify-center rounded-full bg-chartreuse text-lg shadow-lg -rotate-[10deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">💛</div>
+              <div className="absolute -top-2 right-12 z-20 cursor-default rounded-full bg-white px-3 py-1 text-[11px] font-black tracking-wider text-skyaccent shadow-lg rotate-[-8deg] border-2 border-skyaccent/20 transition-transform hover:scale-125">LIKE IT!</div>
+              <div className="absolute bottom-0 -right-2 z-20 cursor-default rounded-lg bg-chartreuse px-3 py-1 text-[10px] font-bold text-white shadow-md rotate-12 transition-transform hover:scale-125">KAWAII!</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* --- 2. About Me セクション --- */}
-      <section
-        id="about-me"
-        aria-labelledby="about-me-heading"
-        className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12"
-      >
+      <section id="about-me" aria-labelledby="about-me-heading" className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12">
         <div className="relative mx-auto max-w-6xl">
           <div className="glass-panel collage-tilt-about relative overflow-visible px-8 py-12 md:min-h-[min(520px,70vh)] md:px-12 md:py-14 md:pr-[min(380px,38vw)]">
+            
+            {/* === 🎀 About Me用シール 🎀 === */}
+            <div className="absolute -top-5 right-[20%] z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-white text-xl shadow-lg rotate-12 border-2 border-skyaccent/30 transition-transform hover:scale-125">💡</div>
+            <div className="absolute bottom-10 left-[-1rem] z-20 flex h-12 w-12 cursor-default items-center justify-center rounded-full bg-hotpink text-xl shadow-lg -rotate-[15deg] border-2 border-white transition-transform hover:scale-125">🎀</div>
+            <div className="absolute top-1/2 left-[-1.5rem] z-20 cursor-default rounded-full bg-white px-3 py-1 text-[11px] font-black tracking-wider text-chartreuse shadow-lg rotate-[-10deg] border-2 border-chartreuse/30 transition-transform hover:scale-125">HELLO!</div>
+
             <div className="relative z-10 mx-auto max-w-2xl text-center md:mx-0 md:text-left">
-              <h2
-                id="about-me-heading"
-                className="mb-3 text-3xl font-bold tracking-tight text-hotpink"
-              >
+              <h2 id="about-me-heading" className="mb-3 text-3xl font-bold tracking-tight text-hotpink">
                 About Me
               </h2>
               <div className="accent-divider-sky mx-auto mb-10 md:mx-0" />
@@ -193,26 +152,21 @@ export default function Home() {
       </section>
 
       {/* --- 3. Skills セクション --- */}
-      <section
-        id="skills"
-        aria-labelledby="skills-heading"
-        className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12"
-      >
-        {/* ★ 左上の適当な画像を消しました */}
+      <section id="skills" aria-labelledby="skills-heading" className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12">
         <div className="glass-panel-strong collage-tilt-skills relative mx-auto max-w-5xl overflow-visible px-8 pb-12 pt-16 md:px-12 md:pb-14 md:pt-12">
-          <h2
-            id="skills-heading"
-            className="relative z-10 mb-3 text-center text-3xl font-bold tracking-tight text-hotpink"
-          >
+          
+          {/* === 🎀 Skills用シール 🎀 === */}
+          <div className="absolute -top-4 left-10 z-20 flex h-11 w-11 cursor-default items-center justify-center rounded-full bg-chartreuse text-xl shadow-lg -rotate-12 border-2 border-white transition-transform hover:scale-125">🚀</div>
+          <div className="absolute -top-3 right-20 z-20 cursor-default rounded-full bg-white px-3 py-1 text-[11px] font-black tracking-wider text-hotpink shadow-lg rotate-[10deg] border-2 border-hotpink/20 transition-transform hover:scale-125">LEVEL UP!</div>
+          <div className="absolute bottom-[-1rem] right-10 z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-skyaccent text-xl shadow-lg rotate-[20deg] border-2 border-white transition-transform hover:scale-125">💻</div>
+
+          <h2 id="skills-heading" className="relative z-10 mb-3 text-center text-3xl font-bold tracking-tight text-hotpink">
             Skills
           </h2>
           <div className="accent-divider-sky mx-auto mb-12" />
           <ul className="relative z-10 flex flex-wrap items-start justify-center gap-x-10 gap-y-12 sm:gap-x-14">
             {SKILLS.map((item) => (
-              <li
-                key={item.id}
-                className="flex w-[min(100%,11rem)] flex-col items-center gap-4 text-center"
-              >
+              <li key={item.id} className="flex w-[min(100%,11rem)] flex-col items-center gap-4 text-center">
                 {item.render()}
                 <span className="text-sm font-semibold text-neutral-800 transition-colors hover:text-hotpink">
                   {item.label}
@@ -223,19 +177,16 @@ export default function Home() {
         </div>
       </section>
 
-{/* --- 4. Works セクション --- */}
-<section
-        id="works"
-        aria-labelledby="works-heading"
-        className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12"
-      >
-        {/* ★ 余白の設定を戻して、CollagePhotoCを復活！ */}
+      {/* --- 4. Works セクション --- */}
+      <section id="works" aria-labelledby="works-heading" className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12">
         <div className="glass-panel collage-tilt-works relative mx-auto max-w-5xl overflow-visible px-8 pb-14 pt-12 md:px-12 md:pb-16 md:pl-[min(13rem,22vw)]">
           <CollagePhotoC />
-          <h2
-            id="works-heading"
-            className="relative z-10 mb-3 text-center text-3xl font-bold tracking-tight text-hotpink"
-          >
+          
+          {/* === 🎀 Works用シール 🎀 === */}
+          <div className="absolute top-10 left-[-1.5rem] z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-hotpink text-xl shadow-lg -rotate-12 border-2 border-white transition-transform hover:scale-125">🎧</div>
+          <div className="absolute -bottom-4 right-1/4 z-20 flex h-11 w-11 cursor-default items-center justify-center rounded-full bg-chartreuse text-xl shadow-lg rotate-12 border-2 border-white transition-transform hover:scale-125">🎵</div>
+
+          <h2 id="works-heading" className="relative z-10 mb-3 text-center text-3xl font-bold tracking-tight text-hotpink">
             Works
           </h2>
           <div className="accent-divider-sky mx-auto mb-12" />
@@ -269,12 +220,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- 5. イラスト（I like...）セクション（★新設！） --- */}
-      <section
-        id="illustrations"
-        className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12"
-      >
+      {/* --- 5. イラスト（I like...）セクション --- */}
+      <section id="illustrations" className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12">
         <div className="glass-panel collage-tilt-about relative mx-auto max-w-5xl px-8 py-14 md:px-12">
+          
+          {/* === 🎀 ギャラリー用シール 🎀 === */}
+          <div className="absolute -top-6 left-1/2 z-20 flex h-12 w-12 -translate-x-1/2 cursor-default items-center justify-center rounded-full bg-skyaccent text-2xl shadow-lg rotate-12 border-2 border-white transition-transform hover:scale-125">🎨</div>
+          <div className="absolute bottom-10 right-[-1rem] z-20 cursor-default rounded-full bg-white px-3 py-1 text-[11px] font-black tracking-wider text-skyaccent shadow-lg rotate-[-15deg] border-2 border-skyaccent/30 transition-transform hover:scale-125">CUTE!</div>
+
           <h2 className="mb-3 text-center text-3xl font-bold tracking-tight text-hotpink">
             I Like Drawing 🎨
           </h2>
@@ -285,15 +238,12 @@ export default function Home() {
 
           {/* 画像3枚を並べるグリッド */}
           <div className="grid gap-8 sm:grid-cols-3">
-            {/* 1枚目 */}
             <div className="group relative aspect-square overflow-hidden rounded-2xl border-4 border-white shadow-lg transition-all hover:scale-105 hover:rotate-2 hover:shadow-hotpink/30">
               <img src="/Boom.JPG" alt="Illustration Boom" className="h-full w-full object-cover" />
             </div>
-            {/* 2枚目 */}
             <div className="group relative aspect-square overflow-hidden rounded-2xl border-4 border-white shadow-lg transition-all hover:scale-105 hover:-rotate-2 hover:shadow-hotpink/30">
               <img src="/Lkawaii.PNG" alt="Illustration Lkawaii" className="h-full w-full object-cover" />
             </div>
-            {/* 3枚目 */}
             <div className="group relative aspect-square overflow-hidden rounded-2xl border-4 border-white shadow-lg transition-all hover:scale-105 hover:rotate-2 hover:shadow-hotpink/30">
               <img src="/swimkawaii.JPG" alt="Illustration Swim" className="h-full w-full object-cover" />
             </div>
@@ -302,11 +252,12 @@ export default function Home() {
       </section>
 
       {/* --- 6. Contact セクション --- */}
-      <section
-        id="contact"
-        className="relative overflow-visible px-4 py-10 pb-24 md:px-8 lg:py-14"
-      >
+      <section id="contact" className="relative overflow-visible px-4 py-10 pb-24 md:px-8 lg:py-14">
         <div className="glass-panel collage-tilt-contact mx-auto max-w-xl px-8 py-12 text-center md:px-12">
+          
+          {/* === 🎀 連絡先用シール 🎀 === */}
+          <div className="absolute -top-4 right-10 z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-hotpink text-xl shadow-lg rotate-12 border-2 border-white transition-transform hover:scale-125">✉️</div>
+
           <h2 className="mb-3 text-3xl font-bold text-hotpink">お問い合わせ</h2>
           <div className="accent-divider-sky mx-auto mb-8" />
           <p className="leading-relaxed text-neutral-700">
