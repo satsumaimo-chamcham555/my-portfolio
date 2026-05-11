@@ -84,14 +84,17 @@ export default function Home() {
     // to-sky-200/50 (終了:水色を少し濃くして範囲を広げる)
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-hotpink/20 via-white to-sky-200/50">
       
-      {/* --- 1. Hero セクション --- */}
-      <section id="hero" className="relative overflow-visible px-4 py-10 md:px-8 lg:py-14">
+{/* --- 1. Hero セクション --- */}
+<section id="hero" className="relative overflow-visible px-4 py-10 md:px-8 lg:py-14">
         <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-hero mx-auto max-w-5xl px-8 py-10 shadow-xl shadow-hotpink/15 md:flex md:items-center md:justify-between md:gap-10 md:px-12 md:py-16">
           <div className="flex-1 text-center md:text-left">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-skyaccent drop-shadow-sm">
+            {/* ★ 「Portfolio」を蛍光緑（text-lime-400）に変更！ */}
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-lime-400 drop-shadow-sm">
               Portfolio
             </p>
-            <h1 className="mb-6 bg-gradient-to-r from-hotpink via-chartreuse to-skyaccent bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
+            {/* ★ 「Satsuki Dohi」のグラデーションから蛍光緑（chartreuse）を削除！ */}
+            {/* ピンク（from-hotpink）から水色（to-skyaccent）の2色グラデーションに！ */}
+            <h1 className="mb-6 bg-gradient-to-r from-hotpink to-skyaccent bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
               Satsuki Dohi
             </h1>
             <div className="accent-divider-sky mb-8 md:mx-0 mx-auto" />
