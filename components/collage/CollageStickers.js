@@ -30,7 +30,7 @@ export function CollagePhotoA() {
       <StickerFrame className="clip-sticker-wobbly bg-white/40">
         <div className="relative aspect-square w-full overflow-hidden">
           <Image
-            src="/kawaiigirl.JPG"
+            src="/aboutMe.jpg"
             alt=""
             fill
             className="object-cover"
