@@ -78,12 +78,14 @@ const WORKS = [
 
 export default function Home() {
   return (
-    // ★ わたあめ色の背景はそのまま！
-    <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-hotpink/20 via-pink-50 to-skyaccent/20">
+    // ★ グラデーションの調整！
+    // from-hotpink/20 (開始:ピンク) 
+    // via-white (中間:白を挟んでスッキリさせる) 
+    // to-sky-200/50 (終了:水色を少し濃くして範囲を広げる)
+    <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-hotpink/20 via-white to-sky-200/50">
       
       {/* --- 1. Hero セクション --- */}
       <section id="hero" className="relative overflow-visible px-4 py-10 md:px-8 lg:py-14">
-        {/* ★ bg-sky-100 を bg-pink-100 に変更！影もピンク系に！ */}
         <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-hero mx-auto max-w-5xl px-8 py-10 shadow-xl shadow-hotpink/15 md:flex md:items-center md:justify-between md:gap-10 md:px-12 md:py-16">
           <div className="flex-1 text-center md:text-left">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-skyaccent drop-shadow-sm">
@@ -94,7 +96,6 @@ export default function Home() {
             </h1>
             <div className="accent-divider-sky mb-8 md:mx-0 mx-auto" />
             
-            {/* 英語入りのプロフィール */}
             <div className="space-y-2 text-lg font-medium text-neutral-800 sm:text-xl">
               <p className="transition-colors hover:text-hotpink">🎓 津田塾大学 学芸学部 情報科学科</p>
               <div className="mt-3 space-y-1.5 text-[15px] font-medium text-neutral-600 sm:text-base">
@@ -130,7 +131,6 @@ export default function Home() {
       {/* --- 2. About Me セクション --- */}
       <section id="about-me" aria-labelledby="about-me-heading" className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12">
         <div className="relative mx-auto max-w-6xl">
-          {/* ★ bg-pink-100 に変更！ */}
           <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-about relative overflow-visible px-8 py-12 shadow-xl shadow-hotpink/15 md:min-h-[min(520px,70vh)] md:px-12 md:py-14 md:pr-[min(380px,38vw)]">
             
             {/* === 🎀 About Me用シール 🎀 === */}
@@ -160,7 +160,6 @@ export default function Home() {
 
       {/* --- 3. Skills セクション --- */}
       <section id="skills" aria-labelledby="skills-heading" className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12">
-        {/* ★ bg-pink-100 に変更！ */}
         <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-skills relative mx-auto max-w-5xl overflow-visible px-8 pb-12 pt-16 shadow-xl shadow-hotpink/15 md:px-12 md:pb-14 md:pt-12">
           
           {/* === 🎀 Skills用シール 🎀 === */}
@@ -187,7 +186,6 @@ export default function Home() {
 
       {/* --- 4. Works セクション --- */}
       <section id="works" aria-labelledby="works-heading" className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12">
-        {/* ★ bg-pink-100 に変更！ */}
         <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-works relative mx-auto max-w-5xl overflow-visible px-8 pb-14 pt-12 shadow-xl shadow-hotpink/15 md:px-12 md:pb-16 md:pl-[min(13rem,22vw)]">
           <CollagePhotoC />
           
@@ -202,7 +200,6 @@ export default function Home() {
           <ul className="relative z-10 mx-auto grid max-w-4xl gap-8 sm:grid-cols-2">         
             {WORKS.map((work) => (
               <li key={work.audioSrc}>
-                {/* ★ 作品のカードは「真っ白＋太フチ」でさらにポップに！影も調整！ */}
                 <article className="flex h-full flex-col rounded-[1.75rem] border-4 border-white bg-white p-6 shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-hotpink/15">
                   <h3 className="text-lg font-bold leading-snug text-hotpink">
                     {work.title}
@@ -230,12 +227,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- 5. イラスト（I like...）セクション --- */}
+      {/* --- 5. イラスト セクション --- */}
       <section id="illustrations" className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12">
-        {/* ★ bg-pink-100 に変更！ */}
         <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-about relative mx-auto max-w-5xl px-8 py-14 shadow-xl shadow-hotpink/15 md:px-12">
           
-          {/* === 🎀 ギャラリー用シール 🎀 === */}
           <div className="absolute -top-6 left-1/2 z-20 flex h-12 w-12 -translate-x-1/2 cursor-default items-center justify-center rounded-full bg-skyaccent text-2xl shadow-lg rotate-12 border-2 border-white transition-transform hover:scale-125">🎨</div>
           <div className="absolute bottom-10 right-[-1rem] z-20 cursor-default rounded-full bg-white px-3 py-1 text-[11px] font-black tracking-wider text-skyaccent shadow-lg rotate-[-15deg] border-2 border-skyaccent/30 transition-transform hover:scale-125">CUTE!</div>
 
@@ -247,7 +242,6 @@ export default function Home() {
             絵を描くことが大好きです！これまで描いたお気に入りのイラストたち 🫧
           </p>
 
-          {/* 画像3枚を並べるグリッド */}
           <div className="grid gap-8 sm:grid-cols-3">
             <div className="group relative aspect-square overflow-hidden rounded-2xl border-4 border-white shadow-lg transition-all hover:scale-105 hover:rotate-2 hover:shadow-hotpink/30">
               <img src="/Boom.JPG" alt="Illustration Boom" className="h-full w-full object-cover" />
@@ -264,12 +258,8 @@ export default function Home() {
 
       {/* --- 6. Contact セクション --- */}
       <section id="contact" className="relative overflow-visible px-4 py-10 pb-24 md:px-8 lg:py-14">
-        {/* ★ bg-pink-100 に変更！ */}
         <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-contact mx-auto max-w-xl px-8 py-12 text-center shadow-xl shadow-hotpink/15 md:px-12">
-          
-          {/* === 🎀 連絡先用シール 🎀 === */}
           <div className="absolute -top-4 right-10 z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-hotpink text-xl shadow-lg rotate-12 border-2 border-white transition-transform hover:scale-125">✉️</div>
-
           <h2 className="mb-3 text-3xl font-bold text-hotpink">お問い合わせ</h2>
           <div className="accent-divider-sky mx-auto mb-8" />
           <p className="leading-relaxed text-neutral-700">
