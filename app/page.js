@@ -89,11 +89,14 @@ export default function Home() {
             <h1 className="mb-6 bg-gradient-to-r from-hotpink via-chartreuse to-skyaccent bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
               Satsuki Dohi
             </h1>
-            <div className="accent-divider-sky mb-8 md:mx-0 mx-auto" />
             <div className="space-y-2 text-lg font-medium text-neutral-800 sm:text-xl">
-              <p className="transition-colors hover:text-hotpink">津田塾大学</p>
-              <p className="transition-colors hover:text-hotpink">学芸学部</p>
-              <p className="transition-colors hover:text-hotpink">情報科学科</p>
+              {/* 大学を1行にスッキリ！ */}
+              <p className="transition-colors hover:text-hotpink">🎓 津田塾大学 学芸学部 情報科学科</p>
+              
+              {/* Satsukiさん専用プロフィール！ */}
+              <p className="transition-colors hover:text-hotpink">🎂 2005年5月3日</p>
+              <p className="transition-colors hover:text-hotpink">🎧 音楽制作とUnityを楽しく勉強中！</p>
+              <p className="transition-colors hover:text-hotpink">🎮 自分でゲームを作れるようになるのが目標です✨</p>
             </div>
           </div>
           <div className="mt-10 flex flex-1 justify-center md:mt-0">
