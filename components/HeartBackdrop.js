@@ -5,6 +5,17 @@ const HEARTS = [
   { top: "22%", right: "18%", size: 16, rotate: "-6deg" },
   { top: "58%", left: "12%", size: 15, rotate: "12deg" },
   { bottom: "26%", right: "11%", size: 17, rotate: "-10deg" },
+  { top: "8%", right: "8%", size: 15, rotate: "15deg" },
+  { top: "45%", right: "5%", size: 12, rotate: "-20deg" },
+  { top: "75%", left: "6%", size: 19, rotate: "5deg" },
+  { bottom: "15%", left: "18%", size: 14, rotate: "-15deg" },
+  { bottom: "8%", right: "22%", size: 16, rotate: "10deg" },
+  { top: "28%", left: "28%", size: 13, rotate: "-5deg" },
+  { top: "68%", right: "25%", size: 20, rotate: "-18deg" },
+  { bottom: "40%", left: "3%", size: 15, rotate: "22deg" },
+  { bottom: "52%", right: "6%", size: 14, rotate: "-8deg" },
+  { top: "88%", right: "14%", size: 17, rotate: "18deg" },
+
 ];
 
 function HeartSvg({ size }) {
