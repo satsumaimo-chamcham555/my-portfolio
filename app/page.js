@@ -4,10 +4,9 @@ import {
   UnityIcon,
   VSCodeIcon,
 } from "@/components/SkillIcons";
+// ★ 使わなくなった B と C を消して、A（AboutMe用）だけ残しました
 import {
   CollagePhotoA,
-  CollagePhotoB,
-  CollagePhotoC,
 } from "@/components/collage/CollageStickers";
 
 const ABOUT_BLOCKS = [
@@ -80,11 +79,9 @@ const WORKS = [
 export default function Home() {
   return (
     <>
-     <section id="hero" className="relative overflow-visible px-4 py-10 md:px-8 lg:py-14">
-        {/* max-w-4xl を 5xl に広げ、md:flex で横並びを許可しました */}
+      {/* --- 1. Hero セクション --- */}
+      <section id="hero" className="relative overflow-visible px-4 py-10 md:px-8 lg:py-14">
         <div className="glass-panel collage-tilt-hero mx-auto max-w-5xl border-t-4 border-chartreuse px-8 py-10 shadow-lg shadow-chartreuse/10 md:flex md:items-center md:justify-between md:gap-10 md:px-12 md:py-16">
-          
-          {/* --- 左側：テキストエリア --- */}
           <div className="flex-1 text-center md:text-left">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-skyaccent drop-shadow-sm">
               Portfolio
@@ -99,31 +96,23 @@ export default function Home() {
               <p className="transition-colors hover:text-hotpink">情報科学科</p>
             </div>
           </div>
-
-          {/* --- 右側：画像エリア --- */}
           <div className="mt-10 flex flex-1 justify-center md:mt-0">
             <div className="relative group">
-              {/* 背景のぼんやりした光 */}
               <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-hotpink/20 to-skyaccent/20 blur-xl group-hover:blur-2xl transition-all"></div>
-              
-              {/* メインの丸い写真 */}
               <img 
                 src="/kawaiigirl.JPG" 
                 alt="Satsuki Dohi" 
                 className="relative z-10 h-64 w-64 rounded-full border-4 border-white object-cover shadow-2xl ring-4 ring-hotpink/30"
               />
-              
-              {/* 「KAWAII!」の小さなステッカー */}
               <div className="absolute -bottom-2 -right-2 z-20 rounded-lg bg-chartreuse px-3 py-1 text-[10px] font-bold text-white shadow-md rotate-12">
                 KAWAII!
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* --- ここに About Me を復元 --- */}
+      {/* --- 2. About Me セクション --- */}
       <section
         id="about-me"
         aria-labelledby="about-me-heading"
@@ -153,15 +142,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* ------------------------------- */}
 
+      {/* --- 3. Skills セクション --- */}
       <section
         id="skills"
         aria-labelledby="skills-heading"
         className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12"
       >
-        <div className="glass-panel-strong collage-tilt-skills relative mx-auto max-w-5xl overflow-visible px-8 pb-12 pt-16 md:px-12 md:pb-14 md:pt-12 md:pl-[min(9rem,14vw)]">
-          <CollagePhotoB />
+        {/* ★ 左上の適当な画像を消しました */}
+        <div className="glass-panel-strong collage-tilt-skills relative mx-auto max-w-5xl overflow-visible px-8 pb-12 pt-16 md:px-12 md:pb-14 md:pt-12">
           <h2
             id="skills-heading"
             className="relative z-10 mb-3 text-center text-3xl font-bold tracking-tight text-hotpink"
@@ -185,13 +174,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* --- 4. Works セクション --- */}
       <section
         id="works"
         aria-labelledby="works-heading"
         className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12"
       >
-        <div className="glass-panel collage-tilt-works relative mx-auto max-w-5xl overflow-visible px-8 pb-14 pt-12 md:px-12 md:pb-16 md:pl-[min(13rem,22vw)]">
-          <CollagePhotoC />
+        {/* ★ ここの適当な画像も消しました */}
+        <div className="glass-panel collage-tilt-works relative mx-auto max-w-5xl overflow-visible px-8 pb-14 pt-12 md:px-12 md:pb-16">
           <h2
             id="works-heading"
             className="relative z-10 mb-3 text-center text-3xl font-bold tracking-tight text-hotpink"
@@ -229,6 +219,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* --- 5. イラスト（I like...）セクション（★新設！） --- */}
+      <section
+        id="illustrations"
+        className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12"
+      >
+        <div className="glass-panel collage-tilt-about relative mx-auto max-w-5xl px-8 py-14 md:px-12">
+          <h2 className="mb-3 text-center text-3xl font-bold tracking-tight text-hotpink">
+            I Like Drawing 🎨
+          </h2>
+          <div className="accent-divider-sky mx-auto mb-6" />
+          <p className="mb-12 text-center text-neutral-700">
+            絵を描くことが大好きです！これまで描いたお気に入りのイラストたち 🫧
+          </p>
+
+          {/* 画像3枚を並べるグリッド */}
+          <div className="grid gap-8 sm:grid-cols-3">
+            {/* 1枚目 */}
+            <div className="group relative aspect-square overflow-hidden rounded-2xl border-4 border-white shadow-lg transition-all hover:scale-105 hover:rotate-2 hover:shadow-hotpink/30">
+              <img src="/Boom.JPG" alt="Illustration Boom" className="h-full w-full object-cover" />
+            </div>
+            {/* 2枚目 */}
+            <div className="group relative aspect-square overflow-hidden rounded-2xl border-4 border-white shadow-lg transition-all hover:scale-105 hover:-rotate-2 hover:shadow-hotpink/30">
+              <img src="/Lkawaii.PNG" alt="Illustration Lkawaii" className="h-full w-full object-cover" />
+            </div>
+            {/* 3枚目 */}
+            <div className="group relative aspect-square overflow-hidden rounded-2xl border-4 border-white shadow-lg transition-all hover:scale-105 hover:rotate-2 hover:shadow-hotpink/30">
+              <img src="/swimkawaii.JPG" alt="Illustration Swim" className="h-full w-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- 6. Contact セクション --- */}
       <section
         id="contact"
         className="relative overflow-visible px-4 py-10 pb-24 md:px-8 lg:py-14"
