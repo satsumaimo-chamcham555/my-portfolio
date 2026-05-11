@@ -105,9 +105,57 @@ export default function Home() {
                 alt="Satsuki Dohi" 
                 className="relative z-10 h-64 w-64 rounded-full border-4 border-white object-cover shadow-2xl ring-4 ring-hotpink/30"
               />
-              <div className="absolute -bottom-2 -right-2 z-20 rounded-lg bg-chartreuse px-3 py-1 text-[10px] font-bold text-white shadow-md rotate-12">
+             {/* 背景のぼんやりした光 */}
+             <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-hotpink/20 to-skyaccent/20 blur-xl group-hover:blur-2xl transition-all"></div>
+              
+              {/* メインの丸い写真 */}
+              <img 
+                src="/kawaiigirl.JPG" 
+                alt="Satsuki Dohi" 
+                className="relative z-10 h-64 w-64 rounded-full border-4 border-white object-cover shadow-2xl ring-4 ring-hotpink/30"
+              />
+              
+              {/* === 🎀 ここからペタペタシールエリア（超増量！） 🎀 === */}
+              {/* ① キラキラシール (new!) */}
+              <div className="absolute -top-4 -left-4 z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-skyaccent text-xl shadow-lg -rotate-12 border-2 border-white transition-transform hover:scale-125 hover:rotate-0">
+                ✨
+              </div>
+
+              {/* ② ほしシール (new!) */}
+              <div className="absolute top-6 right-[min(10%,2rem)] z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-hotpink text-xl shadow-lg rotate-12 border-2 border-white transition-transform hover:scale-125 hover:rotate-0">
+                ⭐
+              </div>
+
+              {/* ③ くもシール (new!) */}
+              <div className="absolute -left-6 top-1/2 z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-chartreuse text-xl shadow-lg -rotate-[20deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">
+                ☁️
+              </div>
+
+              {/* ④ ハートシール 1 (pink) (new!) */}
+              <div className="absolute bottom-6 -left-6 z-20 flex h-12 w-12 cursor-default items-center justify-center rounded-full bg-hotpink text-xl shadow-lg -rotate-[15deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">
+                💖
+              </div>
+
+              {/* ⑤ ハートシール 2 (blue) (new!) */}
+              <div className="absolute bottom-2 left-6 z-20 flex h-9 w-9 cursor-default items-center justify-center rounded-full bg-skyaccent text-lg shadow-lg rotate-[10deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">
+                💙
+              </div>
+
+              {/* ⑥ ハートシール 3 (green) (new!) */}
+              <div className="absolute top-1/2 -right-8 z-20 flex h-9 w-9 cursor-default items-center justify-center rounded-full bg-chartreuse text-lg shadow-lg -rotate-[10deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">
+                💛
+              </div>
+
+              {/* ⑦ 言葉ステッカー (new!) */}
+              <div className="absolute -top-2 right-12 z-20 cursor-default rounded-full bg-white px-3 py-1 text-[11px] font-black tracking-wider text-skyaccent shadow-lg rotate-[-8deg] border-2 border-skyaccent/20 transition-transform hover:scale-125">
+                LIKE IT!
+              </div>
+
+              {/* ⑧ 元からある KAWAII! ステッカー（場所を少し調整） */}
+              <div className="absolute bottom-0 -right-2 z-20 cursor-default rounded-lg bg-chartreuse px-3 py-1 text-[10px] font-bold text-white shadow-md rotate-12 transition-transform hover:scale-125">
                 KAWAII!
               </div>
+              {/* ======================================= */}
             </div>
           </div>
         </div>
