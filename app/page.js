@@ -238,7 +238,7 @@ export default function Home() {
           <div className="absolute bottom-10 right-[-1rem] z-20 cursor-default rounded-full bg-white px-3 py-1 text-[11px] font-black tracking-wider text-skyaccent shadow-lg rotate-[-15deg] border-2 border-skyaccent/30 transition-transform hover:scale-125">CUTE!</div>
 
           <h2 className="mb-3 text-center text-3xl font-bold tracking-tight text-hotpink">
-            I Like Drawing 🎨
+            I Like Drawing
           </h2>
           <div className="accent-divider-sky mx-auto mb-6" />
           <p className="mb-12 text-center text-neutral-700">
