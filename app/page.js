@@ -78,13 +78,13 @@ const WORKS = [
 
 export default function Home() {
   return (
-    // ★ わたあめ色の背景！
+    // ★ わたあめ色の背景はそのまま！
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-hotpink/20 via-pink-50 to-skyaccent/20">
       
       {/* --- 1. Hero セクション --- */}
       <section id="hero" className="relative overflow-visible px-4 py-10 md:px-8 lg:py-14">
-        {/* ★ 透け感をなくした薄い水色のパネル（白い太フチ付き！） */}
-        <div className="bg-sky-100 rounded-[2rem] border-4 border-white collage-tilt-hero mx-auto max-w-5xl px-8 py-10 shadow-xl shadow-skyaccent/20 md:flex md:items-center md:justify-between md:gap-10 md:px-12 md:py-16">
+        {/* ★ bg-sky-100 を bg-pink-100 に変更！影もピンク系に！ */}
+        <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-hero mx-auto max-w-5xl px-8 py-10 shadow-xl shadow-hotpink/15 md:flex md:items-center md:justify-between md:gap-10 md:px-12 md:py-16">
           <div className="flex-1 text-center md:text-left">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-skyaccent drop-shadow-sm">
               Portfolio
@@ -94,7 +94,7 @@ export default function Home() {
             </h1>
             <div className="accent-divider-sky mb-8 md:mx-0 mx-auto" />
             
-            {/* ★ 英語入りのオシャレなプロフィール！ */}
+            {/* 英語入りのプロフィール */}
             <div className="space-y-2 text-lg font-medium text-neutral-800 sm:text-xl">
               <p className="transition-colors hover:text-hotpink">🎓 津田塾大学 学芸学部 情報科学科</p>
               <div className="mt-3 space-y-1.5 text-[15px] font-medium text-neutral-600 sm:text-base">
@@ -130,7 +130,8 @@ export default function Home() {
       {/* --- 2. About Me セクション --- */}
       <section id="about-me" aria-labelledby="about-me-heading" className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12">
         <div className="relative mx-auto max-w-6xl">
-          <div className="bg-sky-100 rounded-[2rem] border-4 border-white collage-tilt-about relative overflow-visible px-8 py-12 shadow-xl shadow-skyaccent/20 md:min-h-[min(520px,70vh)] md:px-12 md:py-14 md:pr-[min(380px,38vw)]">
+          {/* ★ bg-pink-100 に変更！ */}
+          <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-about relative overflow-visible px-8 py-12 shadow-xl shadow-hotpink/15 md:min-h-[min(520px,70vh)] md:px-12 md:py-14 md:pr-[min(380px,38vw)]">
             
             {/* === 🎀 About Me用シール 🎀 === */}
             <div className="absolute -top-5 right-[20%] z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-white text-xl shadow-lg rotate-12 border-2 border-skyaccent/30 transition-transform hover:scale-125">💡</div>
@@ -159,7 +160,8 @@ export default function Home() {
 
       {/* --- 3. Skills セクション --- */}
       <section id="skills" aria-labelledby="skills-heading" className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12">
-        <div className="bg-sky-100 rounded-[2rem] border-4 border-white collage-tilt-skills relative mx-auto max-w-5xl overflow-visible px-8 pb-12 pt-16 shadow-xl shadow-skyaccent/20 md:px-12 md:pb-14 md:pt-12">
+        {/* ★ bg-pink-100 に変更！ */}
+        <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-skills relative mx-auto max-w-5xl overflow-visible px-8 pb-12 pt-16 shadow-xl shadow-hotpink/15 md:px-12 md:pb-14 md:pt-12">
           
           {/* === 🎀 Skills用シール 🎀 === */}
           <div className="absolute -top-4 left-10 z-20 flex h-11 w-11 cursor-default items-center justify-center rounded-full bg-chartreuse text-xl shadow-lg -rotate-12 border-2 border-white transition-transform hover:scale-125">🚀</div>
@@ -185,7 +187,8 @@ export default function Home() {
 
       {/* --- 4. Works セクション --- */}
       <section id="works" aria-labelledby="works-heading" className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12">
-        <div className="bg-sky-100 rounded-[2rem] border-4 border-white collage-tilt-works relative mx-auto max-w-5xl overflow-visible px-8 pb-14 pt-12 shadow-xl shadow-skyaccent/20 md:px-12 md:pb-16 md:pl-[min(13rem,22vw)]">
+        {/* ★ bg-pink-100 に変更！ */}
+        <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-works relative mx-auto max-w-5xl overflow-visible px-8 pb-14 pt-12 shadow-xl shadow-hotpink/15 md:px-12 md:pb-16 md:pl-[min(13rem,22vw)]">
           <CollagePhotoC />
           
           {/* === 🎀 Works用シール 🎀 === */}
@@ -199,8 +202,8 @@ export default function Home() {
           <ul className="relative z-10 mx-auto grid max-w-4xl gap-8 sm:grid-cols-2">         
             {WORKS.map((work) => (
               <li key={work.audioSrc}>
-                {/* ★ 作品のカードは「真っ白＋太フチ」でさらにポップに！ */}
-                <article className="flex h-full flex-col rounded-[1.75rem] border-4 border-white bg-white p-6 shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-skyaccent/30">
+                {/* ★ 作品のカードは「真っ白＋太フチ」でさらにポップに！影も調整！ */}
+                <article className="flex h-full flex-col rounded-[1.75rem] border-4 border-white bg-white p-6 shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-hotpink/15">
                   <h3 className="text-lg font-bold leading-snug text-hotpink">
                     {work.title}
                   </h3>
@@ -229,7 +232,8 @@ export default function Home() {
 
       {/* --- 5. イラスト（I like...）セクション --- */}
       <section id="illustrations" className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12">
-        <div className="bg-sky-100 rounded-[2rem] border-4 border-white collage-tilt-about relative mx-auto max-w-5xl px-8 py-14 shadow-xl shadow-skyaccent/20 md:px-12">
+        {/* ★ bg-pink-100 に変更！ */}
+        <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-about relative mx-auto max-w-5xl px-8 py-14 shadow-xl shadow-hotpink/15 md:px-12">
           
           {/* === 🎀 ギャラリー用シール 🎀 === */}
           <div className="absolute -top-6 left-1/2 z-20 flex h-12 w-12 -translate-x-1/2 cursor-default items-center justify-center rounded-full bg-skyaccent text-2xl shadow-lg rotate-12 border-2 border-white transition-transform hover:scale-125">🎨</div>
@@ -260,7 +264,8 @@ export default function Home() {
 
       {/* --- 6. Contact セクション --- */}
       <section id="contact" className="relative overflow-visible px-4 py-10 pb-24 md:px-8 lg:py-14">
-        <div className="bg-sky-100 rounded-[2rem] border-4 border-white collage-tilt-contact mx-auto max-w-xl px-8 py-12 text-center shadow-xl shadow-skyaccent/20 md:px-12">
+        {/* ★ bg-pink-100 に変更！ */}
+        <div className="bg-pink-100 rounded-[2rem] border-4 border-white collage-tilt-contact mx-auto max-w-xl px-8 py-12 text-center shadow-xl shadow-hotpink/15 md:px-12">
           
           {/* === 🎀 連絡先用シール 🎀 === */}
           <div className="absolute -top-4 right-10 z-20 flex h-10 w-10 cursor-default items-center justify-center rounded-full bg-hotpink text-xl shadow-lg rotate-12 border-2 border-white transition-transform hover:scale-125">✉️</div>
@@ -268,7 +273,7 @@ export default function Home() {
           <h2 className="mb-3 text-3xl font-bold text-hotpink">お問い合わせ</h2>
           <div className="accent-divider-sky mx-auto mb-8" />
           <p className="leading-relaxed text-neutral-700">
-          ご連絡はメールにて⭐️g24903ds@gm.tsuda.ac.jp
+            ご連絡はメールにて⭐️g24903ds@gm.tsuda.ac.jp
           </p>
         </div>
       </section>
