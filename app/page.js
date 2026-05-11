@@ -78,7 +78,7 @@ const WORKS = [
 
 export default function Home() {
   return (
-    <>
+      <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-hotpink/20 via-pink-50 to-skyaccent/20">
       {/* --- 1. Hero セクション --- */}
       <section id="hero" className="relative overflow-visible px-4 py-10 md:px-8 lg:py-14">
         <div className="glass-panel collage-tilt-hero mx-auto max-w-5xl border-t-4 border-chartreuse px-8 py-10 shadow-lg shadow-chartreuse/10 md:flex md:items-center md:justify-between md:gap-10 md:px-12 md:py-16">
@@ -270,6 +270,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-    </>
+    </main>
   );
 }
