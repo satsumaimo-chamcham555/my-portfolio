@@ -90,15 +90,17 @@ export default function Home() {
               Satsuki Dohi
             </h1>
             <div className="space-y-2 text-lg font-medium text-neutral-800 sm:text-xl">
-              {/* 大学を1行にスッキリ！ */}
+              {/* 大学名（今まで通りしっかり見せる） */}
               <p className="transition-colors hover:text-hotpink">🎓 津田塾大学 学芸学部 情報科学科</p>
               
-              {/* Satsukiさん専用プロフィール！ */}
-              <p className="transition-colors hover:text-hotpink">🎂 2005年5月3日</p>
-              <p className="transition-colors hover:text-hotpink">🎧 音楽制作とUnityを楽しく勉強中！</p>
-              <p className="transition-colors hover:text-hotpink">🎮 自分でゲームを作れるようになるのが目標です✨</p>
+              {/* ここから下は少し小さく（text-[15px]）、英語で軽やかに！ */}
+              <div className="mt-3 space-y-1.5 text-[15px] font-medium text-neutral-600 sm:text-base">
+                <p className="transition-colors hover:text-hotpink">🎂 Born: 2005.05.03</p>
+                <p className="transition-colors hover:text-hotpink">🎧 Studying now... Music & Unity!</p>
+                <p className="transition-colors hover:text-hotpink">🎮 Goal: Making my own games ✨</p>
+              </div>
             </div>
-          </div>
+            </div>
           <div className="mt-10 flex flex-1 justify-center md:mt-0">
             <div className="relative group">
               {/* === 写真1枚だけ！背景のぼんやりした光 === */}
