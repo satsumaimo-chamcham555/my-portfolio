@@ -114,7 +114,7 @@ export default function Home() {
               <div className="absolute bottom-6 -left-6 z-20 flex h-12 w-12 cursor-default items-center justify-center rounded-full bg-hotpink text-xl shadow-lg -rotate-[15deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">💖</div>
               <div className="absolute bottom-2 left-6 z-20 flex h-9 w-9 cursor-default items-center justify-center rounded-full bg-skyaccent text-lg shadow-lg rotate-[10deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">💙</div>
               <div className="absolute top-1/2 -right-8 z-20 flex h-9 w-9 cursor-default items-center justify-center rounded-full bg-chartreuse text-lg shadow-lg -rotate-[10deg] border-2 border-white transition-transform hover:scale-125 hover:rotate-0">💛</div>
-              <div className="absolute -top-2 right-12 z-20 cursor-default rounded-full bg-white px-3 py-1 text-[11px] font-black tracking-wider text-skyaccent shadow-lg rotate-[-8deg] border-2 border-skyaccent/20 transition-transform hover:scale-125">LIKE IT!</div>
+              <div className="absolute -top-2 right-12 z-20 cursor-default rounded-full bg-white px-3 py-1 text-[11px] font-black tracking-wider text-skyaccent shadow-lg rotate-[-8deg] border-2 border-skyaccent/20 transition-transform hover:scale-125">It's Me!</div>
               <div className="absolute bottom-0 -right-2 z-20 cursor-default rounded-lg bg-chartreuse px-3 py-1 text-[10px] font-bold text-white shadow-md rotate-12 transition-transform hover:scale-125">KAWAII!</div>
             </div>
           </div>
