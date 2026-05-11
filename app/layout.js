@@ -2,7 +2,6 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { HeartBackdrop } from "@/components/HeartBackdrop";
-import { CollagePhotoD } from "@/components/collage/CollageStickers";
 
 export const metadata = {
   title: "Satsuki Dohi | Portfolio",
@@ -18,7 +17,6 @@ export default function RootLayout({ children }) {
           <Navbar />
           <main className="flex-1">{children}</main>
           <div className="relative">
-            <CollagePhotoD />
             <Footer />
           </div>
         </div>

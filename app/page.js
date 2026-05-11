@@ -4,9 +4,10 @@ import {
   UnityIcon,
   VSCodeIcon,
 } from "@/components/SkillIcons";
-// ★ 使わなくなった B と C を消して、A（AboutMe用）だけ残しました
+// ★ C（Works用）を復活！
 import {
   CollagePhotoA,
+  CollagePhotoC,
 } from "@/components/collage/CollageStickers";
 
 const ABOUT_BLOCKS = [
@@ -174,14 +175,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- 4. Works セクション --- */}
-      <section
+{/* --- 4. Works セクション --- */}
+<section
         id="works"
         aria-labelledby="works-heading"
         className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12"
       >
-        {/* ★ ここの適当な画像も消しました */}
-        <div className="glass-panel collage-tilt-works relative mx-auto max-w-5xl overflow-visible px-8 pb-14 pt-12 md:px-12 md:pb-16">
+        {/* ★ 余白の設定を戻して、CollagePhotoCを復活！ */}
+        <div className="glass-panel collage-tilt-works relative mx-auto max-w-5xl overflow-visible px-8 pb-14 pt-12 md:px-12 md:pb-16 md:pl-[min(13rem,22vw)]">
+          <CollagePhotoC />
           <h2
             id="works-heading"
             className="relative z-10 mb-3 text-center text-3xl font-bold tracking-tight text-hotpink"
@@ -189,7 +191,7 @@ export default function Home() {
             Works
           </h2>
           <div className="accent-divider-sky mx-auto mb-12" />
-          <ul className="relative z-10 mx-auto grid max-w-4xl gap-8 sm:grid-cols-2">
+          <ul className="relative z-10 mx-auto grid max-w-4xl gap-8 sm:grid-cols-2">         
             {WORKS.map((work) => (
               <li key={work.audioSrc}>
                 <article className="glass-panel-strong flex h-full flex-col rounded-[1.75rem] border-2 border-hotpink/25 bg-white/50 p-6 shadow-lg shadow-hotpink/15 backdrop-blur-xl transition-all hover:border-hotpink/45 hover:shadow-hotpink/25">
