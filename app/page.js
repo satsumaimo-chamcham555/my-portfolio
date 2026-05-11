@@ -122,7 +122,39 @@ export default function Home() {
 
         </div>
       </section>
-      
+
+      {/* --- ここに About Me を復元 --- */}
+      <section
+        id="about-me"
+        aria-labelledby="about-me-heading"
+        className="relative overflow-visible px-4 py-8 md:px-8 lg:py-12"
+      >
+        <div className="relative mx-auto max-w-6xl">
+          <div className="glass-panel collage-tilt-about relative overflow-visible px-8 py-12 md:min-h-[min(520px,70vh)] md:px-12 md:py-14 md:pr-[min(380px,38vw)]">
+            <div className="relative z-10 mx-auto max-w-2xl text-center md:mx-0 md:text-left">
+              <h2
+                id="about-me-heading"
+                className="mb-3 text-3xl font-bold tracking-tight text-hotpink"
+              >
+                About Me
+              </h2>
+              <div className="accent-divider-sky mx-auto mb-10 md:mx-0" />
+              <div className="space-y-8 text-left text-[15px] leading-relaxed text-neutral-800 sm:text-base">
+                {ABOUT_BLOCKS.map((block, i) => (
+                    <div key={i} className="space-y-3">
+                        {block.lines.map((line, j) => (
+                            <p key={j}>{line}</p>
+                        ))}
+                    </div>
+                ))}
+              </div>
+            </div>
+            <CollagePhotoA />
+          </div>
+        </div>
+      </section>
+      {/* ------------------------------- */}
+
       <section
         id="skills"
         aria-labelledby="skills-heading"
