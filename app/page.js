@@ -261,7 +261,7 @@ export default function Home() {
           <h2 className="mb-3 text-3xl font-bold text-hotpink">お問い合わせ</h2>
           <div className="accent-divider-sky mx-auto mb-8" />
           <p className="leading-relaxed text-neutral-700">
-            ご連絡は SNS またはメールにて（準備中）。
+            ご連絡はメールにて⭐️g24903ds@gm.tsuda.ac.jp
           </p>
         </div>
       </section>
